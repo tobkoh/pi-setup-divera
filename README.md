@@ -54,7 +54,7 @@ PASS="Ihr_Passwort"
 
 1. Klonen Sie dieses Repository auf Ihr Raspberry Pi:
    ```bash
-   git clone https://github.com/IhrGitHubBenutzername/pi-setup-divera.git
+   git clone https://github.com/tobkoh/pi-setup-divera.git
    ```
 
 2. Navigieren Sie in das Verzeichnis des geklonten Repositories:
