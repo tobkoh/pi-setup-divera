@@ -72,10 +72,3 @@ PASS="Ihr_Passwort"
    chmod +x setup.sh
    sudo ./setup.sh
    ```
-
-## Lizenz
-
-Dieses Projekt ist unter der MIT-Lizenz lizenziert – siehe die [LICENSE](LICENSE) Datei für Details.
-```
-
-Sie können diesen Text in eine Datei mit dem Namen `README.md` einfügen und sie in Ihrem Repository speichern.
