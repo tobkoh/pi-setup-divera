@@ -1,4 +1,3 @@
-Hier ist der komplette Text für die README-Datei:
 
 ```markdown
 # pi-setup-divera
