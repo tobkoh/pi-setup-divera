@@ -1,55 +1,48 @@
 
 ```markdown
-# pi-setup-divera
+# Raspberry Pi Setup Scripts for DIVERA247
 
-Dieses Skript konfiguriert ein Raspberry Pi mit Raspberry Pi OS Bookworm. Es stellt eine WLAN-Verbindung her, entfernt unnötige Programme, aktualisiert das System und installiert die DIVERA247 Monitor-Anwendung. Außerdem richtet es Audio-Speech-Pakete ein und konfiguriert den dbus-Dienst und die Autostart-Einstellungen.
+Dieses Repository enthält zwei Skripte zur Konfiguration eines Raspberry Pi mit Raspberry Pi OS Bookworm. Das erste Skript konfiguriert das System und installiert die stabile Version der DIVERA247 Monitor-Anwendung. Das zweite Skript entfernt die bestehende Konfiguration und installiert die Beta-Version der DIVERA247 Monitor-Anwendung.
 
-## Vor der Ausführung
+## Skripte
 
-Bevor Sie dieses Skript ausführen, stellen Sie sicher, dass Sie die WLAN-SSID und das Passwort im Skript eingetragen haben:
+### setup.sh
 
-```bash
-SSID="Ihre_SSID"
-PASS="Ihr_Passwort"
-```
+Dieses Skript führt die folgenden Aufgaben aus:
 
-## Schritte des Skripts
+1. Konfiguration des WLAN-Netzwerks.
+2. Entfernen unnötiger Programme.
+3. Systembereinigung.
+4. System-Update und -Upgrade.
+5. Installation erforderlicher Pakete.
+6. Erstellung der dbus-Service-Datei.
+7. Import des Debian-Paket-Signaturschlüssels und Hinzufügen des non-free Repositorys.
+8. Herunterladen der DIVERA247 Monitor-Anwendung.
+9. Konfiguration der Autostart-Datei.
+10. Installation der Audio-Speech-Pakete.
+11. Erstellung eines Skripts zum Aktivieren des SmartTV per CEC.
+12. Neustart des Systems zur Übernahme der Änderungen.
 
-1. **Konfiguration des WLAN-Netzwerks:**
-   - Fügt die SSID und das Passwort zum WLAN-Netzwerk hinzu.
-   - Startet den WLAN-Dienst neu und wartet, bis die Internetverbindung hergestellt ist.
+### setup_beta.sh
 
-2. **Entfernen unnötiger Programme:**
-   - Entfernt vorinstallierte Programme wie LibreOffice, Wolfram Engine, Sonic Pi, Scratch und andere.
+Dieses Skript führt die folgenden Aufgaben aus:
 
-3. **Systembereinigung:**
-   - Entfernt nicht benötigte Pakete und bereinigt den Cache.
-
-4. **System-Update und -Upgrade:**
-   - Aktualisiert das System und führt ein Upgrade durch.
-
-5. **Installation erforderlicher Pakete:**
-   - Installiert Pakete wie libfuse2, dbus, notification-daemon und xdotool.
-
-6. **Erstellung der dbus-Service-Datei:**
-   - Erstellt eine Service-Datei für den Notification-Daemon.
-
-7. **Import des Debian-Paket-Signaturschlüssels und Hinzufügen des non-free Repositorys:**
-   - Importiert den Debian-Paket-Signaturschlüssel und fügt das non-free Repository hinzu.
-
-8. **Herunterladen und Installieren der DIVERA247 Monitor-Anwendung:**
-   - Lädt die DIVERA247 Monitor-Anwendung herunter und macht sie ausführbar.
-
-9. **Konfiguration der Autostart-Datei:**
-   - Erstellt eine Autostart-Datei für die DIVERA247 Monitor-Anwendung.
-
-10. **Installation der Audio-Speech-Pakete:**
-    - Installiert benötigte Pakete für Text-to-Speech und VLC.
-
-11. **Neustart des Systems:**
-    - Startet das System neu, um alle Änderungen zu übernehmen.
+1. Entfernen der bestehenden DIVERA247 Monitor-App Konfiguration.
+2. Entfernen der bestehenden Autostart-Datei.
+3. Herunterladen der DIVERA247 Monitor Beta-Version.
+4. Konfiguration der Autostart-Datei für die Beta-Version.
+5. Hinweis zum Neustart des Systems zur Übernahme der Änderungen.
 
 ## Verwendung
+
+### Vorbereitung
+
+Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
+
+- Ein Raspberry Pi mit Raspberry Pi OS Bookworm.
+- Zugang zum Internet.
+
+### Installation
 
 1. Klonen Sie dieses Repository auf Ihr Raspberry Pi:
    ```bash
@@ -61,13 +54,33 @@ PASS="Ihr_Passwort"
    cd pi-setup-divera
    ```
 
-3. Bearbeiten Sie das Skript, um Ihre WLAN-SSID und Ihr Passwort einzutragen:
-   ```bash
-   nano setup.sh
-   ```
+### Ausführung
 
-4. Führen Sie das Skript aus:
+#### setup.sh
+
+1. Machen Sie das Skript ausführbar:
    ```bash
    chmod +x setup.sh
+   ```
+
+2. Führen Sie das Skript aus:
+   ```bash
    sudo ./setup.sh
    ```
+
+3. Folgen Sie den Anweisungen auf dem Bildschirm, um den Benutzernamen, die WLAN-SSID und das WLAN-Passwort einzugeben.
+
+#### setup_beta.sh
+
+1. Machen Sie das Skript ausführbar:
+   ```bash
+   chmod +x setup_beta.sh
+   ```
+
+2. Führen Sie das Skript aus:
+   ```bash
+   sudo ./setup_beta.sh
+   ```
+
+3. Geben Sie den Benutzernamen ein, wenn Sie dazu aufgefordert werden.
+
