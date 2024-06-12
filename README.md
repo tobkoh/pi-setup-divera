@@ -93,12 +93,12 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
 1. Machen Sie das Skript ausführbar:
    ```bash
-   sudo chmod +x setup_beta.sh
+   sudo chmod +x beta_setup.sh
    ```
 
 2. Führen Sie das Skript aus:
    ```bash
-   ./setup_beta.sh
+   ./beta_setup.sh
    ```
 
 3. Geben Sie den Benutzernamen ein, wenn Sie dazu aufgefordert werden.
