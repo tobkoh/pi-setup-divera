@@ -79,12 +79,12 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
 1. Machen Sie das Skript ausführbar:
    ```bash
-   chmod +x setup.sh
+   sudo chmod +x setup.sh
    ```
 
 2. Führen Sie das Skript aus:
    ```bash
-   sudo ./setup.sh
+   ./setup.sh
    ```
 
 3. Folgen Sie den Anweisungen auf dem Bildschirm, um den Benutzernamen, die WLAN-SSID und das WLAN-Passwort einzugeben.
@@ -93,12 +93,12 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
 1. Machen Sie das Skript ausführbar:
    ```bash
-   chmod +x setup_beta.sh
+   sudo chmod +x setup_beta.sh
    ```
 
 2. Führen Sie das Skript aus:
    ```bash
-   sudo ./setup_beta.sh
+   ./setup_beta.sh
    ```
 
 3. Geben Sie den Benutzernamen ein, wenn Sie dazu aufgefordert werden.
