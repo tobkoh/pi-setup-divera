@@ -55,7 +55,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 echo "5/12: Installation erforderlicher Pakete..."
 
 # Install required packages
-sudo apt-get install -y libfuse2 dbus notification-daemon xdotool
+sudo apt-get install -y libfuse2 dbus notification-daemon xdotool jq unclutter cec-utils
 
 echo "6/12: Erstellung der dbus-Service-Datei..."
 
